@@ -1,0 +1,9 @@
+
+
+test:
+  override:
+    - mvn package
+    
+  post:
+    - mkdir $CIRCLE_ARTIFACTS/
+    - mv target/*.war $CIRCLE_ARTIFACTS/
